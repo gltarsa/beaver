@@ -1,45 +1,45 @@
-Started GET "/widgets" for 216.84.130.30 at 2011-01-30 10:07:27 -0400
-  Processing by WidgetsController#index as 
-Redirected to http://example.com/widgets
-Rendered widgets/index.html.erb within layouts/application (5.5ms)
-Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 6.5ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Started GET "/widgets" for 216.84.130.30 at 2011-01-30 10:07:27 -0400
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- :   Processing by WidgetsController#index as
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Redirected to http://example.com/widgets
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Rendered widgets/index.html.erb within layouts/application (5.5ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 6.5ms)
 
 
-Started POST "/widgets" for 216.84.130.31 at 2011-05-30 10:07:40 -0400
-  Processing by WidgetsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PFO2RnDpeXWu6vvTQcJlWoB8jCuTqa8mpgLhLEXQohM=", "name"=>"Three-toed sock", "price"=>"10.00"}
-Redirected to http://example.com/widgets/5
-Completed 302 Found in 27ms
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Started POST "/widgets" for 216.84.130.31 at 2011-05-30 10:07:40 -0400
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- :   Processing by WidgetsController#create as HTML
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"PFO2RnDpeXWu6vvTQcJlWoB8jCuTqa8mpgLhLEXQohM=", "name"=>"Three-toed sock", "price"=>"10.00"}
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Redirected to http://example.com/widgets/5
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Completed 302 Found in 27ms
 
 
-Started POST "/widgets/2" for 216.84.130.30 at 2011-08-30 10:07:40 -0400
-  Processing by WidgetsController#update as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PFO2RnDpeXWu6vvTQcJlWoB8jCuTqa8mpgLhLEXQohM=", "name"=>"Three-toed sock", "price"=>"10.00", "_method"=>"put"}
-Redirected to http://example.com/widgets/2
-Completed 302 Found in 28ms
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Started POST "/widgets/2" for 216.84.130.30 at 2011-08-30 10:07:40 -0400
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- :   Processing by WidgetsController#update as HTML
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"PFO2RnDpeXWu6vvTQcJlWoB8jCuTqa8mpgLhLEXQohM=", "name"=>"Three-toed sock", "price"=>"10.00", "_method"=>"put"}
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Redirected to http://example.com/widgets/2
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Completed 302 Found in 28ms
 
-Started POST "/big_form" for 216.84.130.30 at 2011-08-30 10:08:50 -0400
-  Processing by WidgetsController#update as HTML
-  Parameters: {"hi"=>"Hello", "boo"=>"Boo", "sub"=>{"1"=>"5", "eight"=>"8", "2"=>"3", "7"=>"10"}, "end"=>"The End", "a"=>["1", "2", "3"], "another end"=>"The End 2"}
-Redirected to http://example.com/big_form
-Completed 302 Found in 26ms
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Started POST "/big_form" for 216.84.130.30 at 2011-08-30 10:08:50 -0400
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- :   Processing by WidgetsController#update as HTML
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- :   Parameters: {"hi"=>"Hello", "boo"=>"Boo", "sub"=>{"1"=>"5", "eight"=>"8", "2"=>"3", "7"=>"10"}, "end"=>"The End", "a"=>["1", "2", "3"], "another end"=>"The End 2"}
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Redirected to http://example.com/big_form
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Completed 302 Found in 26ms
 
-Started GET "/cashtracker" for 76.177.247.3 at 2012-01-29 18:52:24 -0500
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Started GET "/cashtracker" for 76.177.247.3 at 2012-01-29 18:52:24 -0500
 
-Started GET "/cashtracker/ledgers" for 76.177.247.3 at 2012-01-29 18:52:24 -0500
-[foo] [bar] Processing by LedgersController#index as HTML
-[foo] [bar]   Rendered ledgers/index.html.erb within layouts/application (7.9ms)
-[foo] [bar]   Rendered ledgers/_info.html.erb (0.0ms)
-[foo] [bar] Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
-[steve] [bar]
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Started GET "/cashtracker/ledgers" for 76.177.247.3 at 2012-01-29 18:52:24 -0500
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [foo] [bar] Processing by LedgersController#index as HTML
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [foo] [bar]   Rendered ledgers/index.html.erb within layouts/application (7.9ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [foo] [bar]   Rendered ledgers/_info.html.erb (0.0ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [foo] [bar] Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.6ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar]
 
-Started GET "/cashtracker/ledgers/5" for 76.177.247.3 at 2012-01-29 18:52:25 -0500
-[steve] [bar] Processing by LedgersController#show as HTML
-[steve] [bar]   Parameters: {"id"=>"5"}
-[steve] [bar]   Rendered ledgers/show.html.erb within layouts/application (13.2ms)
-[steve] [bar]   Rendered ledgers/_info.html.erb (0.0ms)
-[steve] [bar]   Rendered funds/_info.html.erb (0.0ms)
-[steve] [bar]   Rendered accounts/_info.html.erb (0.0ms)
-[steve] [bar] Completed 200 OK in 36ms (Views: 19.4ms | ActiveRecord: 3.2ms)
-[steve] [bar]
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : Started GET "/cashtracker/ledgers/5" for 76.177.247.3 at 2012-01-29 18:52:25 -0500
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar] Processing by LedgersController#show as HTML
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar]   Parameters: {"id"=>"5"}
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar]   Rendered ledgers/show.html.erb within layouts/application (13.2ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar]   Rendered ledgers/_info.html.erb (0.0ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar]   Rendered funds/_info.html.erb (0.0ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar]   Rendered accounts/_info.html.erb (0.0ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar] Completed 200 OK in 36ms (Views: 19.4ms | ActiveRecord: 3.2ms)
+I, [2017-06-21T06:47:54.572483 #70170]  INFO -- : [steve] [bar]
 

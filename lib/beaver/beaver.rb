@@ -10,21 +10,21 @@
 #      puts "#{status} on #{path} at #{time} from #{ip} with #{params_str}"
 #    end
 #  end
-# 
+#
 #  # Parse and filters the requests, returns nil
 #  Beaver.stream('/path/to/log/files') do
 #    hit :error, :status => (400..505) do
 #      puts "#{status} on #{path} at #{time} from #{ip} with #{params_str}"
 #    end
 #  end
-# 
+#
 module Beaver
   # Parses the logs and returns the requests.
   def self.parse(*args)
     Beaver.new(*args).parse.requests
   end
 
-  # Parses the logs and filters them through the given block. *All* parsed requests 
+  # Parses the logs and filters them through the given block. *All* parsed requests
   # are returned, not just the ones that matched. This is useful for when you take your action(s) on the matching reqeusts *inside* the block, but you still want access to all the requsts afterwords.
   def self.filter(*args, &blk)
     Beaver.new(*args, &blk).parse.filter.requests
@@ -32,7 +32,7 @@ module Beaver
 
   # Parses the logs and filters them through the (optional) block. Parsed requests are
   # not retained, hence are not returned. Returns nil.
-  # 
+  #
   # In theory, this should be more memory efficient than Beaver#filter.
   def self.stream(*args, &blk)
     Beaver.new(*args, &blk).stream
@@ -55,20 +55,20 @@ module Beaver
 
   # The Beaver class, which keeps track of the files you're parsing, the Beaver::Dam objects you've defined,
   # and parses and filters the matching Beaver::Request objects.
-  # 
+  #
   #  beaver = Beaver.new do
   #    hit :help, :path => '/help' do
   #      puts "#{ip} needed help"
   #    end
   #  end
-  # 
+  #
   #  # Method 1 - logs will be parsed and filtered line-by-line, then discarded. Performance should be constant regardless of the number of logs.
   #  beaver.stream
-  # 
+  #
   #  # Method 2 - all of the logs will be parsed at once and stored in "beaver.requests". Then each request will be filtered.
   #  # This does not scale as well, but is necessary *if you want to hang onto the parsed requests*.
   #  beaver.parse.filter
-  # 
+  #
   class Beaver
     # The log files to parse
     attr_reader :logs
@@ -144,7 +144,7 @@ module Beaver
     end
 
     # Tells this Beaver to look in STDIN for log content to parse. NOTE This ignores tty input unless you also call Beaver#tty!.
-    # 
+    #
     # *Must* be called before "stream" or "parse" to have any effect. Returns "self," so it is chainable. Can also be used in the DSL.
     def stdin!
       @stdin = true
@@ -152,7 +152,7 @@ module Beaver
     end
 
     # Tells this Beaver to look in STDIN for tty input.
-    # 
+    #
     # *Must* be called before "stream" or "parse" to have any effect. Returns "self," so it is chainable. Can also be used in the DSL.
     def tty!
       stdin!
@@ -193,6 +193,7 @@ module Beaver
       request = nil
       # Parses a line into part of a request
       parse_it = lambda { |line|
+        line.sub!(/^.* -- : /, '')  # remove any Production log prefix
         if request
           request << line
         else
